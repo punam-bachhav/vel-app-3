@@ -28,6 +28,13 @@ pipeline {
 					  }
 				 } 
 		   }
+		   stage ('mkdir-4') {
+		         steps {
+				      dir ("/mnt/data/wsp-4") {
+					         sh "mkdir test-folder-4"
+					  }
+				 } 
+		   }
 		   
 	   }
 }
