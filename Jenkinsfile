@@ -1,4 +1,4 @@
-pipeline {
+[200~pipeline {
        agent {
 	       label {
 		       label "built-in"
@@ -17,6 +17,7 @@ pipeline {
 		   stage ('mkdir-2') {
 		         steps {
 				      dir ("/mnt/data/wsp-2") {
+					         sh "rm -rf"
 					         sh "mkdir test-folder-2"
 					  }
 				 }
@@ -24,6 +25,7 @@ pipeline {
 		    stage ('mkdir-3') {
 		         steps {
 				      dir ("/mnt/data/wsp-3") {
+					         sh "rm -rf" 
 					         sh "mkdir test-folder-3"
 					  }
 				 } 
@@ -31,6 +33,7 @@ pipeline {
 		   stage ('mkdir-4') {
 		         steps {
 				      dir ("/mnt/data/wsp-4") {
+					          sh "rm -rf"
 					         sh "mkdir test-folder-4"
 					  }
 				 } 
